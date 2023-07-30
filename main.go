@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"github.com/joaoscorissa/gin-api-rest/database"
+	"github.com/joaoscorissa/gin-api-rest/routes"
+)
 
 func main() {
-	fmt.Print("H")
+	database.ConnectDB()
+	routes.HandleRequest()
 }
